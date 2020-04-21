@@ -37,58 +37,58 @@ define :permanent_drumset do
 end
 
 define :bass_guitar do
-
+  
   # meeep.
   # Feels like that's not 100% correct..
   #
-
+  
   play :e3
   sleep dotted(half)
-
+  
   play :e3
   sleep quart
-
+  
   play :g3, release: 0.4
   sleep dotted(quart)
-
+  
   play :e3, release: 0.4
   sleep dotted(quart)
-
+  
   play :d3, release: 0.4
   sleep quart
-
+  
   play :c3, release: 0.8
   sleep tick
-
+  
   play :b2
   sleep tick
 end
 
 define :lead_guit do
-
+  
   play :g4, sustain: 1.5
   sleep 2.0
-
+  
   play 70, sustain: 1.0
   sleep tick
-
+  
   play :a4, sustain: 0.5, release: 0.5
   sleep tick
-
+  
   play :g4, sustain: 1.5
   sleep 2.0
-
+  
   play 70, sustain: 0.5
   sleep quart
   sleep 0.125
-
+  
   play 71, release: 0.24
   sleep quart
   sleep 0.125
-
+  
   play 70, release: 0.24
   sleep quart
-
+  
   play 69, sustain: 1.0
   sleep tick
 end
@@ -107,7 +107,7 @@ end
 in_thread(name: :ontop) do
   sync :frame
   sleep 8*tick
-
+  
   with_fx :distortion do
     with_fx :compressor, amp: 0.2 do
       loop do
@@ -118,4 +118,3 @@ in_thread(name: :ontop) do
     end
   end
 end
-© 2020 GitHub, Inc.
